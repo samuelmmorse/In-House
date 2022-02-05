@@ -434,6 +434,22 @@ input[type=submit]:hover {
     background-color: #1D2E3F;
     color: #FFFFFF;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
 @media screen and (max-width: 1080px) {
     .right-content {   
       flex-direction: column;
