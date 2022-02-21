@@ -217,6 +217,64 @@ body {
     max-width: 200px;
 }
 
+.content-box-header {
+    font-size: 22px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 21px;
+    color: rgb(255, 255, 255);
+    
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.content-box {
+    background: rgb(68, 67, 67);
+    font-size: 18px;
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    line-height: 40px;
+
+    padding: 10px;
+    width: 110px;
+    height: 38px;
+    color: rgb(255, 255, 255);
+    box-shadow: 1.5px 1.5px #020202;
+}
+
+.content-box-holder {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.select-menu {
+    height: 60px;
+    width: 353px;
+    background-color: #1D2E3F;
+    box-shadow: 1.5px 1.5px #020202;
+    border: 1px solid #1D2E3F;
+    margin-right:100px;
+
+    /* Header 2 */
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+    
+    /* white */
+    color: #FFFFFF;
+}
+
+.select-menu-holder {
+    margin-left: 190px;
+    margin-top: -237px;
+}
+
 /* Left image crop */
 .bg-image-left {
     float: left;
@@ -500,6 +558,50 @@ input[type=text], select {
     background-color: #1D2E3F;
     color: #FFFFFF;
 }
+
+.new_help_session_cancel_btn {
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+    color: white;
+
+    padding: 10px 40px;
+    background-color: #FC0A0A;
+    text-align: center;
+    box-shadow: 1.5px 1.5px #020202;
+}
+
+.new_help_session_submit_btn {
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+    color: #0D598E;
+
+    padding: 6px 15px;
+    margin-left: 10px;
+    background-color: #29DF25;
+    text-align: center;
+    border: none;
+    box-shadow: 1.5px 1.5px #020202;
+}
+
+.new_help_session_cancel_btn:hover {
+    background-color: #b80606;
+}
+
+.new_help_session_submit_btn:hover {
+    background-color: #1ca11a;
+}
+
+.new_help_session_btn_holder{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
 @media screen and (max-width: 1080px) {
     .right-content {   
       flex-direction: column;
