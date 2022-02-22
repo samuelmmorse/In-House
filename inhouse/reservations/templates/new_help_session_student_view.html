@@ -18,7 +18,8 @@
                 <p class="content-box">Topic</p>
                 <p class="content-box">Time</p>
             </div>
-            <form class="select-menu-holder">
+            <form action="" method="post" class="select-menu-holder">
+                {% csrf_token %}
                 <select id="helper" name="helper" class="select-menu">
                     <option>Zach Hutchinson (PHD Student)</option>
                 </select> 
