@@ -1,3 +1,4 @@
+from re import I
 from django.shortcuts import render
 from oauth2_provider.views.generic import ProtectedResourceView
 from django.contrib.auth.decorators import login_required
@@ -10,6 +11,12 @@ cal.setfirstweekday(calendar.SUNDAY)
 
 
 # Create your views here.
+
+@login_required()
+def myAccount_Student(request):
+    return render(request, 'myAccount_Student.html')
+
+
 
 @login_required()
 def index(request):

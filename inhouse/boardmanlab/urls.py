@@ -11,5 +11,6 @@ urlpatterns = [
     path('calendarDay/<int:year>/<int:month>/<int:day>/', views.calendarDay, name='calendarDay'),
     path('/error', views.error, name='error'),
     path('/accounts', include('allauth.urls')),
+    path('/Myaccount_Student', views.myAccount_Student, name='myAccount_Student'),
 ]
 
