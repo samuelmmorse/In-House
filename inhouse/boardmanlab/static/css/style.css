@@ -270,6 +270,26 @@ body {
     color: #FFFFFF;
 }
 
+.select-menu-disabled {
+    height: 60px;
+    width: 353px;
+    background-color: #131c27;
+    box-shadow: 1.5px 1.5px #020202;
+    border: 1px solid #131c27;
+    appearance: none;
+
+    /* Header 2 */
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    
+    /* white */
+    color: #FFFFFF;
+}
+
 .select-menu-holder {
     margin-left: 190px;
     margin-top: -237px;
