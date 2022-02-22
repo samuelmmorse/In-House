@@ -8,8 +8,14 @@ def new_help_session(request):
         helper = request.POST['helper']
         topic = request.POST['topic']
         time = request.POST['time']
-        
+
+        context={
+            "helper": helper,
+            "topic": topic,
+            "time": time
+        }
         ins = Reservation(topic=topic, duration=time, student='Ben', helper=helper)
         ins.save()
+        return render(request, "successful_booking.html", context)
 
     return render(request, 'new_help_session_student_view.html')

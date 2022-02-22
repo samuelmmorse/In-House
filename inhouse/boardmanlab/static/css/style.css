@@ -256,13 +256,14 @@ body {
     background-color: #1D2E3F;
     box-shadow: 1.5px 1.5px #020202;
     border: 1px solid #1D2E3F;
+    appearance: none;
 
     /* Header 2 */
     font-family: Cambay;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    line-height: 29px;
+    line-height: 20px;
     letter-spacing: -0.02em;
     
     /* white */
@@ -272,8 +273,33 @@ body {
 .select-menu-holder {
     margin-left: 190px;
     margin-top: -237px;
+    margin-right: 50px;
     display: flex;
     flex-direction: column;
+}
+
+.successful-booking {
+    background-color: #0D598E;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 100px;
+}
+
+.successful-booking-label {
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+
+    background-color: #29DF25;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 40px;
+    padding: 10px;
+    padding-left: 3%;
+    padding-right: 3%;
+    color: #0D598E;
 }
 
 /* Left image crop */
@@ -598,7 +624,7 @@ input[type=text], select {
     background-color: #1ca11a;
 }
 
-.new_help_session_btn_holder{
+.new_help_session_btn_holder {
     margin-left: 10px;
     margin-top: 10px;
     display: flex;
