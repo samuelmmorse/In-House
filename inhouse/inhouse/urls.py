@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import include, path
-from boardmanlab.views import index, login, helpsessions, calendarMonth, error, calendarDay, myAccount_Student, myAccount_Helper, myAccount_Student_Edit
+from boardmanlab.views import index, login, helpsessions, calendarMonth, error, calendarDay, myAccount_Student, myAccount_Helper, myAccount_Student_Edit, myAccount_Helper_Edit
 #from inhouse.boardmanlab.views import myAccount_Helper
 import oauth2_provider.views as oauth2_views
 from django.conf import settings

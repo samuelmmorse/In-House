@@ -14,5 +14,6 @@ urlpatterns = [
     path('/Myaccount_Student', views.myAccount_Student, name='myAccount_Student'),
     path('/Myaccount_Helper', views.myAccount_Student, name='myAccount_Student'),
     path('/Myaccount_Student_Edit', views.myAccount_Student_Edit, name='myAccount_Student_Edit'),
+    path('/Myaccount_Helper_Edit', views.myAccount_Helper_Edit, name='myAccount_Helper_Edit'),
 ]
 

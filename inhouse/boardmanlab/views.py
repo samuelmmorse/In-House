@@ -12,6 +12,10 @@ cal.setfirstweekday(calendar.SUNDAY)
 
 # Create your views here.
 
+@login_required()
+def myAccount_Helper_Edit(request):
+    return render(request, 'myAccount_Helper_Edit.html')
+
 
 @login_required()
 def myAccount_Student_Edit(request):
