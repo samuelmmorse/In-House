@@ -24,7 +24,18 @@
      
 
         <!-- PAGE CONTENT GOES HERE -->
-        {% include 'elements/myAccount_Helper_content_Edit.html' %}
+        {% include 'elements/myAccount_Helper_Edit_Content.html' %}
+
+        <!--Cancel button-->
+        <button onclick="window.location.href='http://127.0.0.1:8000/myAccount_Helper/'" style="font-weight:bold; text-align:center; height: 25px; width: 75px; background-color: red; font-size: 12px; position: relative; top: 100px; left: 185px;">
+            Cancel
+        </button>
+
+        <!--Confirm Edits -->
+        <button onclick="window.location.href='http://127.0.0.1:8000/myAccount_Helper/'" style="font-weight:bold; text-align:center; height: 25px; width: 125px; background-color: green; font-size: 12px; position: relative; top: 100px; left: 200px;">
+          Confirm Edits
+        </button>
+
         <!-- END PAGE CONTENT -->
 
       </div>

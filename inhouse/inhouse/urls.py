@@ -49,7 +49,8 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('myAccount_Student/', myAccount_Student),
     path('myAccount_Helper/', myAccount_Helper),
-    path('myAccount_Student_Edit/', myAccount_Student_Edit)
+    path('myAccount_Student_Edit/', myAccount_Student_Edit),
+    path('myAccount_Helper_Edit/', myAccount_Helper_Edit) 
 ]
 
 # Error handling
