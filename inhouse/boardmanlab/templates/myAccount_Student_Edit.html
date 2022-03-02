@@ -26,18 +26,12 @@
         <!-- PAGE CONTENT GOES HERE -->
         {% include 'elements/myAccount_Student_Edit_content.html' %}
 
-
-        <form action="/action_page.php" style="height: 25px; width: 175px; position: relative; top: 25px; left: 160px; ">
-          <select name="courses" id="courses">
+        <select class="select" multiple style="position: relative; top: 20px; left: 163px; width: 150px; height: 65px;">
+          <option value="COS497">COS497 </option>
+          <option value="COS331">COS331</option>
+          <option value="COS454">COS454</option>
+        </select>
         
-            <option value="COS497">COS497</option>
-            <option value="COS331">COS331</option>
-            <option value="COS454">COS454</option>
-          </select>
-          <br><br>
-          <input type="submit" value="Submit" style="position: relative; left: 300px ">
-        </form>
-
       
       <form action="/action_page.php">
         <textarea name="message" rows="10" cols="30" style="position: relative; top: 50px; left: 160px; "></textarea>
