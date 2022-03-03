@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'boardmanlab',
     'users',
+    'reservations',
     'oauth2_provider',
     'corsheaders',
     #allauth apps:
@@ -40,6 +41,8 @@ INSTALLED_APPS = [
 ]
 
 AUTH_USER_MODEL='users.User'
+
+SOCIALACCOUNT_ADAPTER = 'users.models.CustomSocialAccountAdapter'
 
 LOGIN_URL='/'
 
@@ -160,10 +163,23 @@ SOCIALACCOUNT_PROVIDERS = {
             'profile',
             'email',
             'openid',
-            'https://www.googleapis.com/auth/calendar.readonly'
         ],
         'AUTH_PARAMS': {
             'access_type': 'online',
         }
     }
 }
+
+
+SOCIAL_AUTH_PIPELINE = (
+   'users.views.update_user_social_data'
+)
+
+DATE_INPUT_FORMAT = [
+    '%Y-%m-%d', '%Y/%m/%d', # '2006-10-25', '10/25/2006', '10/25/06'
+    '%m-%d-%Y', '%m/%d/%Y'
+]
+
+TIME_INPUT_FORMAT = [
+    '%H:%M:%S',     # '14:30:59'
+]

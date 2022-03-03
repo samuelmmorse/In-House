@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django.urls import include, path
-from boardmanlab.views import index, login, helpsessions, calendarMonth, error, calendarDay, myAccount_Student, myAccount_Helper, myAccount_Student_Edit, myAccount_Helper_Edit
+from boardmanlab.views import index, login, helpsessions, calendarMonth, error, calendarDay, myAccount_Student, myAccount_Helper, myAccount_Student_Edit, myAccount_Helper_Edit,managehelpsessions, calendarMonth, error, calendarDay, createHelpSession, editHelpSession, success
 #from inhouse.boardmanlab.views import myAccount_Helper
 import oauth2_provider.views as oauth2_views
+from reservations.views import new_help_session
 from django.conf import settings
 from boardmanlab.views import ApiEndpoint, Home
 
@@ -32,12 +33,16 @@ if settings.DEBUG:
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     path('home/', index),
     path('helpsessions/', helpsessions),
+    path('createHelpSession/', createHelpSession, name='createHelpSession'),
+    path('manageHelpSessions/', managehelpsessions, name='manageHelpSessions'),
+    path('editHelpSession', editHelpSession, name='editHelpSession'),
+    path('new_help_session/', new_help_session),
     path('calendarMonth', calendarMonth, name='calendarMonth'),
     path('calendarMonth/<int:year>/<int:month>/<int:day>/', calendarMonth),
     path('calendarDay/<int:year>/<int:month>/<int:day>/', calendarDay, name='calendarDay'),
+    path('success', success, name='success'),
     path('error/', error),
     path('', login),
     path('allauth', Home.as_view(), name='home'), # new

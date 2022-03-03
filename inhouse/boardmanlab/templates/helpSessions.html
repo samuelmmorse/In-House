@@ -1,29 +1,64 @@
 {% extends 'main/base.html' %}
-
-
-{% block leftnav %}
-      <a href="index.html" class="sidebar-button-open unselectable">Calendar</a>
-      <a href="index.html" class="sidebar-button-closed unselectable">Account</a>
-      <div class="sidebar-blank" style="opacity: .8"></div>
-{% endblock %}
+{% load calendar_tags %}
 
 {% block content %}
 <!-- Center Flex Box -->
   <div class="center-content">
     <div class="center-content-tab-container">
       <a href="/calendarMonth/0/0/0/" class="center-content-closed-tab unselectable">Calendar</a>
-      <div class="center-content-open-tab unselectable" style="margin-left: 0">My Help Sessions</div>
-      <div class="help_session_filter_btn">Filter</div>
+      <div class="center-content-open-tab unselectable" style="margin-left: 0">Sessions</div>
+        {% if user.is_helper or user.is_admin %}
+      <a href="/manageHelpSessions" class="center-content-closed-tab unselectable">Manage</a>
+      {% endif %}
       <div class="center-content-blank-tab"></div>
     </div>
     <div class="center-content-tab-content-container">
 
       <div class="center-content-tab-content">
+
+
         <!-- PAGE CONTENT GOES HERE -->
-        CALENDER
-      
-      
-      
+
+        <!-- Filter -->
+        {% include 'elements/filter_helpSessions.html' %}
+        <!-- End of Filter -->
+
+
+        <div class="scroll-content">
+        {% for reservation in reservations %}
+        <div class="help-session-box" style="padding: 10px">
+            <div class="help-session-title">{% get_day_string_from_datetime reservation.helpSession.date %} {{reservation.helpSession.date}}</div>
+            <div class="help-session-info-row">
+                <div class="help-session-label">Time</div>
+                <div class="help-session-info">{{reservation.helpSession.time}}</div>
+              </div>
+            <div class="help-session-info-row">
+              <div class="help-session-label">Helper</div>
+              <div class="help-session-info">{{reservation.helpSession.helper.first_name}} {{reservation.helpSession.helper.last_name}}</div>
+            </div>
+            <div class="help-session-info-row">
+              <div class="help-session-label">Topic</div>
+              <div class="help-session-info">{{reservation.helpSession.topic}}</div>
+            </div>
+            <div class="help-session-info-row">
+              <div class="help-session-label">Duration</div>
+              <div class="help-session-info">{{reservation.helpSession.duration}} minutes</div>
+            </div>
+        
+            <div class="help-session-info-fullrow">
+                
+                <form action="/calendarMonth/0/0/0/" class="form-button">
+                    <input type="submit" class="ultrablue darktext" id="small-button" value="Provide Feedback"></input>
+                </form>
+            </div>
+        
+          </div>
+        {% endfor %}
+        </div>
+
+
+
+        
       </div>
     </div>
   </div>

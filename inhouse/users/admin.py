@@ -2,12 +2,13 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
 from .models import User
+from .models import Topic
 # Register your models here.
 
 class CustomUserAdmin(UserAdmin):
     list_display = (
         'username', 'email', 'first_name', 'last_name', 'is_staff',
-        'is_student', 'is_helper', 'is_admin'
+        'is_student', 'is_helper', 'is_admin', 'picture',
         )
 
     fieldsets = (
@@ -15,7 +16,7 @@ class CustomUserAdmin(UserAdmin):
             'fields': ('username', 'password')
         }),
         ('Personal info', {
-            'fields': ('first_name', 'last_name', 'email')
+            'fields': ('first_name', 'last_name', 'email', 'picture')
         }),
         ('Permissions', {
             'fields': (
@@ -27,7 +28,7 @@ class CustomUserAdmin(UserAdmin):
             'fields': ('last_login', 'date_joined')
         }),
         ('Additional info', {
-            'fields': ('is_student', 'is_helper', 'is_admin')
+            'fields': ('is_student', 'is_helper', 'is_admin', 'topics')
         })
     )
 
@@ -48,8 +49,10 @@ class CustomUserAdmin(UserAdmin):
             'fields': ('last_login', 'date_joined')
         }),
         ('Additional info', {
-            'fields': ('is_student', 'is_helper', 'is_admin')
+            'fields': ('is_student', 'is_helper', 'is_admin', 'topics')
         })
     )
 
 admin.site.register(User, CustomUserAdmin)
+
+
