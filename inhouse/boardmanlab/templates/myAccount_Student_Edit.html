@@ -26,17 +26,22 @@
         <!-- PAGE CONTENT GOES HERE -->
         {% include 'elements/myAccount_Student_Edit_content.html' %}
       <div class="center-block" style="position: relative; top: 100px;">
-        <div style="font-weight:bold; text-align:center; height: 25px; width: 180px; background-color: gray; font-size: 12px; 
-        position: relative; left: 50px;">
-          Computer science major
-      </div>
-      
-      
-      <div style="font-weight:bold; text-align:center; height: 25px; width: 90px; background-color: rgb(41, 33, 74); font-size: 12px;
-       position: relative; left: 250px; bottom: 25px;">
-          Senior
-      </div>
 
+        <!--First line-->
+        <div class="first-line">
+          <div style="font-weight:bold; text-align:center; height: 25px; width: 180px; background-color: gray; font-size: 12px; 
+          position: relative; left: 50px;">
+            Computer science major
+          </div>
+      
+      
+        <div style="font-weight:bold; text-align:center; height: 25px; width: 90px; background-color: rgb(41, 33, 74); font-size: 12px;
+          position: relative; left: 250px; bottom: 25px;">
+          Senior
+        </div>
+      </div>
+      
+      <div class="Second-line">
         <div style="font-weight:bold; text-align:center; height: 25px; width: 100px; background-color: gray; font-size: 12px; position: relative; left: 50px;">
          classes
         </div>
@@ -49,9 +54,11 @@
             <option value="COS454">COS454</option>
             
           </select>
-
+        </div>
+        <!--Second line end-->
 
           {% if user.is_helper%}
+          <div class="Third-line">
           <div style="font-weight:bold; text-align:center; height: 25px; width: 100px; background-color: gray; font-size: 12px; position: relative; left: 50px;">
             position
           </div>
@@ -60,8 +67,11 @@
           left: 160px; bottom:25px">
             MLA
           </div>
-        
+        </div>
+        <!--Third line end-->
 
+
+        <div class="Fourth-line">
           <div style="font-weight:bold; text-align:center; height: 25px; width: 160px; background-color: gray; font-size: 12px; position: relative; left: 50px;">
             Topic/Class Proficiencies
         </div>
@@ -74,7 +84,8 @@
          <option value="COS454">COS250</option>
          
        </select>
-
+      </div>
+      <!--Fourth line end-->
 
         {% endif %}
 
@@ -83,7 +94,7 @@
 
 
         
-      
+        <div class="Fifth-line">
           <div style="font-weight:bold; text-align:center; height: 25px; width: 100px; background-color: gray; font-size: 12px; 
           position: relative; left: 50px;">
             Bio
@@ -92,10 +103,14 @@
 
 
           <form action="/action_page.php">
-            <textarea name="message" rows="10" cols="30" style="position: relative; bottom: 25px; left: 160px; "></textarea>
+            <textarea name="message" rows="10" cols="60" style="position: relative; bottom: 25px; left: 160px; "></textarea>
        
           </form>
+        </div>
+        <!--Fifth line end-->
 
+
+        <div class="Sixth-line">
           <button onclick="window.location.href='http://127.0.0.1:8000/myAccount_Student/'" style="font-weight:bold; text-align:center; height: 25px; width: 75px; background-color: red; font-size: 12px; position:
            relative; left: 185px; top: 30px;">
             Cancel
@@ -107,7 +122,7 @@
           </button>
 
           </div>
-
+        </div>
 
         <!-- END PAGE CONTENT -->
 
