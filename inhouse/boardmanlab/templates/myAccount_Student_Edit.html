@@ -25,27 +25,30 @@
 
         <!-- PAGE CONTENT GOES HERE -->
         {% include 'elements/myAccount_Student_Edit_content.html' %}
-        
-        <select class="select" multiple style="position: relative; top: 20px; left: 163px; width: 150px; height: 65px; background-color: purple;">
-          <option value="COS497">COS497 </option>
-          <option value="COS331">COS331</option>
-          <option value="COS454">COS454</option>
-        </select>
+      <div class="center-block">
+          <select class="select" multiple style="position: relative; top: 20px; left: 163px; width: 150px; height: 65px;
+           background-color: rgb(41, 33, 74);">
+            <option value="COS497">COS497 </option>
+            <option value="COS331">COS331</option>
+            <option value="COS454">COS454</option>
+            
+          </select>
         
       
-      <form action="/action_page.php">
-        <textarea name="message" rows="10" cols="30" style="position: relative; top: 50px; left: 160px; "></textarea>
+          <form action="/action_page.php">
+            <textarea name="message" rows="10" cols="30" style="position: relative; top: 50px; left: 160px; "></textarea>
        
-      </form>
+          </form>
 
-      <button onclick="window.location.href='http://127.0.0.1:8000/myAccount_Student/'" style="font-weight:bold; text-align:center; height: 25px; width: 75px; background-color: red; font-size: 12px; position: relative; top: 75px; left: 185px;">
-        Cancel
-    </button>
+          <button onclick="window.location.href='http://127.0.0.1:8000/myAccount_Student/'" style="font-weight:bold; text-align:center; height: 25px; width: 75px; background-color: red; font-size: 12px; position: relative; top: 75px; left: 185px;">
+            Cancel
+          </button>
     
-    <button onclick="window.location.href='http://127.0.0.1:8000/myAccount_Student/'" style="font-weight:bold; text-align:center; height: 25px; width: 100px; background-color: green; font-size: 12px; position: relative; top: 75px; left: 200px;">
-        Confirm Edits
-    </button>
+          <button onclick="window.location.href='http://127.0.0.1:8000/myAccount_Student/'" style="font-weight:bold; text-align:center; height: 25px; width: 100px; background-color: green; font-size: 12px; position: relative; top: 75px; left: 200px;">
+            Confirm Edits
+          </button>
 
+          </div>
 
 
         <!-- END PAGE CONTENT -->
