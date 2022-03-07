@@ -56,7 +56,8 @@
             position
           </div>
           
-          <div style="font-weight:bold; text-align:center; height: 25px; width: 50px; background-color: rgb(41, 33, 74); font-size: 12px; position: relative; left: 160px;">
+          <div style="font-weight:bold; text-align:center; height: 25px; width: 50px; background-color: rgb(41, 33, 74); font-size: 12px; position: relative; 
+          left: 160px; bottom:25px">
             MLA
           </div>
         
@@ -64,6 +65,16 @@
           <div style="font-weight:bold; text-align:center; height: 25px; width: 160px; background-color: gray; font-size: 12px; position: relative; left: 50px;">
             Topic/Class Proficiencies
         </div>
+
+        <select class="select" multiple style="position: relative; bottom: 25px; left: 220px; width: 150px; height: 65px;
+        background-color: rgb(41, 33, 74);">
+         <option value="COS497">COS125 </option>
+         <option value="COS331">COS140</option>
+         <option value="COS454">COS226</option>
+         <option value="COS454">COS250</option>
+         
+       </select>
+
 
         {% endif %}
 
@@ -74,14 +85,14 @@
         
       
           <div style="font-weight:bold; text-align:center; height: 25px; width: 100px; background-color: gray; font-size: 12px; 
-          position: relative; left: 50px; top: 40px;">
+          position: relative; left: 50px;">
             Bio
           </div>
         
 
 
           <form action="/action_page.php">
-            <textarea name="message" rows="10" cols="30" style="position: relative; left: 160px; top: 10px;"></textarea>
+            <textarea name="message" rows="10" cols="30" style="position: relative; bottom: 25px; left: 160px; "></textarea>
        
           </form>
 
