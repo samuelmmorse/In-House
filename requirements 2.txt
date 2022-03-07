@@ -1,0 +1,9 @@
+Django
+psycopg2
+django-extensions
+djangorestframework
+gunicorn
+django-oauth-toolkit
+django-cors-headers
+django-allauth
+google-auth
