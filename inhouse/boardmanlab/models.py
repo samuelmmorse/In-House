@@ -19,4 +19,8 @@ class myAccount(models.Model):
     classesTaking = models.TextChoices
     userPosition = models.TextChoices
     userProficiencies = models.TextChoices
-    userBio = models.TextField
+    userBio = models.TextField(max_length=1000)
+
+
+class EduYear(models.TextChoices)
+    
