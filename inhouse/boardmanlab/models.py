@@ -1,3 +1,4 @@
+from os import major
 from django.db import models
 from users import models as u
 # Create your models here.
@@ -12,3 +13,10 @@ class helpSession(models.Model):
 
     class Meta:
         ordering = ["time"]
+
+class myAccount(models.Model):
+    userYear =models.TextChoices
+    classesTaking = models.TextChoices
+    userPosition = models.TextChoices
+    userProficiencies = models.TextChoices
+    userBio = models.TextField
