@@ -14,6 +14,7 @@ class helpSession(models.Model):
     class Meta:
         ordering = ["time"]
 
+""""
 class myAccount(models.Model):
     userYear =models.TextChoices
     classesTaking = models.TextChoices
@@ -23,4 +24,4 @@ class myAccount(models.Model):
 
 
 class EduYear(models.TextChoices)
-    
+"""    

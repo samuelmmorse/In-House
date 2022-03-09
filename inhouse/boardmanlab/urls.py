@@ -15,9 +15,7 @@ urlpatterns = [
     path('/error', views.success, name='error'),
     path('/error', views.error, name='error'),
     path('/accounts', include('allauth.urls')),
-    path('/Myaccount_Student', views.myAccount_Student, name='myAccount_Student'),
-    path('/Myaccount_Helper', views.myAccount_Student, name='myAccount_Student'),
-    path('/Myaccount_Student_Edit', views.myAccount_Student_Edit, name='myAccount_Student_Edit'),
-    path('/Myaccount_Helper_Edit', views.myAccount_Helper_Edit, name='myAccount_Helper_Edit'),
+    path('/myAccount', views.myAccount, name='myAccount'),
+    path('/myAccount_Edit', views.myAccount_Edit, name='myAccount_Student_Edit'),
 ]
 

@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import include, path
-from boardmanlab.views import index, login, helpsessions, calendarMonth, error, calendarDay, myAccount_Student, myAccount_Helper, myAccount_Student_Edit, myAccount_Helper_Edit,managehelpsessions, calendarMonth, error, calendarDay, createHelpSession, editHelpSession, success
+from boardmanlab.views import index, login, helpsessions, calendarMonth, error, calendarDay, myAccount, myAccount_Edit, managehelpsessions, calendarMonth, error, calendarDay, createHelpSession, editHelpSession, success
 #from inhouse.boardmanlab.views import myAccount_Helper
 import oauth2_provider.views as oauth2_views
 from reservations.views import new_help_session
@@ -52,10 +52,8 @@ urlpatterns = [
     path('o/', include((oauth2_endpoint_views, 'oauth2_provider'), namespace="oauth2_provider")),
     path('api/hello', ApiEndpoint.as_view()),  # an example resource endpoint
     path('accounts/', include('allauth.urls')),
-    path('myAccount_Student/', myAccount_Student),
-    path('myAccount_Helper/', myAccount_Helper),
-    path('myAccount_Student_Edit/', myAccount_Student_Edit),
-    path('myAccount_Helper_Edit/', myAccount_Helper_Edit) 
+    path('myAccount/', myAccount),
+    path('myAccount_Edit/', myAccount_Edit)
 ]
 
 # Error handling
