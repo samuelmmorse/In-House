@@ -57,18 +57,23 @@ class FormCreateHelpSession(forms.Form):
             ),
         )
 
+eduYear_Choice= (
+    ('Freshman', 'Freshman'),
+    ('Sophomore', 'Sophomore'),
+    ('Junior', 'Junior'),
+    ('Senior', 'Senior'),
+)
+
+
 class FormMyAccountEdit(forms.ModelForm):
     class Meta:
 
-    eduYear = forms.ChoiceField(
-        choices=[(eduYear.eduYear, eduYear.eduYear) for eduYear in eduYear.objects.all()],
-        widget=forms.select(
-            attrs={'id': 'slectForm'}
-        ),
-    )
-
-
-
+        eduYear = forms.ChoiceField(
+            choices=[(eduYear.eduYear, eduYear.eduYear) for eduYear in eduYear_Choice],
+            widget=forms.select(
+                attrs={'id': 'selectForm'}
+                                ),
+                                   )
 
 
 class FormEditHelpSession(forms.ModelForm):
