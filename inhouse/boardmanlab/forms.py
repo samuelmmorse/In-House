@@ -69,10 +69,10 @@ class FormMyAccountEdit(forms.ModelForm):
     class Meta:
 
         eduYear = forms.ChoiceField(
-            choices=[(eduYear.eduYear, eduYear.eduYear) for eduYear in eduYear_Choice],
-            widget=forms.select(
+            choices=eduYear_Choice,
+            widget=forms.Select(
                 attrs={'id': 'selectForm'}
-                                ),
+                                )
                                    )
 
 
