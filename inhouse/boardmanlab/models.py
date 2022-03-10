@@ -16,7 +16,7 @@ class helpSession(models.Model):
 
 
 class myAccount(models.Model):
-    userYear =models.TextChoices
+    userYear = models.TextChoices
     classesTaking = models.TextChoices
     userPosition = models.TextChoices
     userProficiencies = models.TextChoices

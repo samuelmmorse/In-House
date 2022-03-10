@@ -1,3 +1,4 @@
+from os import major
 from django import forms
 from datetime import datetime
 from users.models import User, Topic
@@ -56,6 +57,19 @@ class FormCreateHelpSession(forms.Form):
             ),
         )
 
+class FormMyAccountEdit(forms.ModelForm):
+    class Meta:
+
+    eduYear = forms.ChoiceField(
+        choices=[(eduYear.eduYear, eduYear.eduYear) for eduYear in eduYear.objects.all()],
+        widget=forms.select(
+            attrs={'id': 'slectForm'}
+        ),
+    )
+
+
+
+
 
 class FormEditHelpSession(forms.ModelForm):
     class Meta:
@@ -87,6 +101,9 @@ class FormEditHelpSession(forms.ModelForm):
             attrs={'id': 'selectForm'}
             ),
         )
+
+
+
 
 class FormEditButton(forms.Form):
         helpSessionID = forms.IntegerField(
