@@ -2,7 +2,7 @@ from os import major
 from django import forms
 from datetime import datetime
 from users.models import User, Topic
-from .models import helpSession
+from .models import helpSession, myAccount
 
 today = datetime.now()
 
