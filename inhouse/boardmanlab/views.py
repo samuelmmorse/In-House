@@ -9,7 +9,7 @@ from datetime import datetime
 from .models import helpSession
 from reservations.models import Reservation
 from users.models import User, Topic
-from .forms import FormFilterDate, FormCreateHelpSession, FormDeleteHelpSession, FormEditHelpSession, FormEditButton
+from .forms import FormFilterDate, FormCreateHelpSession, FormDeleteHelpSession, FormEditHelpSession, FormEditButton, FormMyAccountEdit
 import calendar
 cal = calendar.Calendar()
 cal.setfirstweekday(calendar.SUNDAY)
